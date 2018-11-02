@@ -61,82 +61,96 @@ public class Main
         Scanner scan = new Scanner(System.in);
         int Vraag = scan.nextInt();
 
-        //Eten
-        if(Vraag == 1)
+
+
+        switch (Vraag)//Eten
         {
-            //Warm of Koud eten Vraag
-            System.out.println("Wilt u warm of koud eten?");
-            System.out.println("1 = Warm");
-            System.out.println("2 = Koud");
-            int Eten = scan.nextInt();
-            //Warm eten
-            if(Eten == 1)
-            {
-                System.out.println("Dit is all het Warme Eten:");
-                for(int i = 0; i < prodWarmEten.size(); i++)
-                {
-                    System.out.println(i + 1 + ". " + prodWarmEten.get(i));
-                }
-            }
-
-            //Koud Eten
-            if(Eten == 2)
-            {
-                System.out.println("Dit is all het Koude Eten:");
-                System.out.println(prodKoudEten);
-            }
-            else{
-                  System.out.println("U heeft het verkeerde nummer ingevult! Vul 1 of 2 in.");
-            }
-        }
-
-        //Drinken
-        if(Vraag == 2) {
-            System.out.println("Heeft u Dorst?");
-            System.out.println("1 = Ja");
-            System.out.println("2 = Nee");
-            int Dorst = scan.nextInt();
-            if(Dorst == 1) {
-
-                //Warm of Koud drinken Vraag
-                System.out.println("Wilt u warm of koud drankje?");
+            case 1:
+                //Warm of Koud eten Vraag
+                System.out.println("Wilt u warm of koud eten?");
                 System.out.println("1 = Warm");
                 System.out.println("2 = Koud");
-                int Drinken = scan.nextInt();
-
-                //Warm Drinken
-                if (Drinken == 1) {
-                    System.out.println("Dit zijn alle Warme Drankjes:");
-                    System.out.println(prodWarmDrinken);
+                int Eten = scan.nextInt();
+                //Warm eten
+                if(Eten == 1)
+                {
+                    System.out.println("Dit is all het Warme Eten:");
+                    for(int i = 0; i < prodWarmEten.size(); i++)
+                    {
+                        System.out.println(i + 1 + ". " + prodWarmEten.get(i));
+                    }
                 }
 
-                //Koud Drinken
-                if (Drinken == 2) {
-                    System.out.println("Dit zijn alle Koude Drankjes:");
-                    System.out.println(prodKoudDrinken);
-                } else {
+                //Koud Eten
+                if(Eten == 2)
+                {
+                    System.out.println("Dit is all het Koude Eten:");
+                    for(int i = 0; i < prodKoudEten.size(); i++)
+                    {
+                        System.out.println(i + 1 + ". " + prodKoudEten.get(i));
+                    }
+                }
+                else{
                     System.out.println("U heeft het verkeerde nummer ingevult! Vul 1 of 2 in.");
                 }
-            }
-            else {
-                System.out.println("Wilt u stoppen?");
+                break;
+
+            case 2:
+                System.out.println("Heeft u Dorst?");
                 System.out.println("1 = Ja");
                 System.out.println("2 = Nee");
-                int Stop = scan.nextInt();
-                if(Stop == 1)
-                {
-                    System.exit(1);
+                int Dorst = scan.nextInt();
+                if(Dorst == 1) {
+
+                    //Warm of Koud drinken Vraag
+                    System.out.println("Wilt u warm of koud drankje?");
+                    System.out.println("1 = Warm");
+                    System.out.println("2 = Koud");
+                    int Drinken = scan.nextInt();
+
+                    //Warm Drinken
+                    if (Drinken == 1) {
+                        System.out.println("Dit zijn alle Warme Drankjes:");
+                        for(int i = 0; i < prodWarmDrinken.size(); i++)
+                        {
+                            System.out.println(i + 1 + ". " + prodWarmDrinken.get(i));
+                        }
+                    }
+
+                    //Koud Drinken
+                    if (Drinken == 2) {
+                        System.out.println("Dit zijn alle Koude Drankjes:");
+                        for(int i = 0; i < prodKoudDrinken.size(); i++)
+                        {
+                            System.out.println(i + 1 + ". " + prodKoudDrinken.get(i));
+                        }
+                    } else {
+                        System.out.println("U heeft het verkeerde nummer ingevult! Vul 1 of 2 in.");
+                    }
                 }
-                if(Stop == 2)
-                {
-                    start();
-                }
-                else
-                {
-                    System.out.println("U heeft het verkeerde nummer ingevult! Vul 1 of 2 in.");
-                }
-            }
+                break;
+
+                default:
+                    System.out.println("Wilt u stoppen?");
+                    System.out.println("1 = Ja");
+                    System.out.println("2 = Nee");
+                    int Stop = scan.nextInt();
+                    if(Stop == 1)
+                    {
+                        System.exit(1);
+                    }
+                    if(Stop == 2)
+                    {
+                        start();
+                    }
+                    else
+                    {
+                        System.out.println("U heeft het verkeerde nummer ingevult! Vul 1 of 2 in.");
+                    }
+                    break;
         }
+
+
     }
 
 }
