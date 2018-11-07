@@ -312,13 +312,16 @@ public class Main {
 
 
         //Voegt de keuze toe aan een de Array order
-        order.add(" ________ ");
-        order.add("/        \\");
-        order.add("|        |");
-        order.add("------------");
-        order.add("|----------|");
-        order.add("|----------|");
-        order.add("\\----------/");
+        order.add("       _____");
+        order.add("    .-'     '-.");
+        order.add("  .'()      () '.");
+        order.add(" /               \\");
+        order.add(";    ()           ;");
+        order.add("|          ()     |");
+        order.add(";                 ;");
+        order.add(" \\  ()     ()    /");
+        order.add("  '.           .'");
+        order.add("    '-._____.-'");
     }
 
     public void chocoladeReep() {
