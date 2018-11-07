@@ -17,7 +17,7 @@ public class Main
     public static ArrayList<String> order = new ArrayList<String>();
 
     //Scanner
-    public Scanner sc = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
 
     //Het geld waar je mee start
     public double budget = 20;
@@ -114,7 +114,7 @@ public class Main
         System.out.println("Wilt u iets eten of iets drinken?");
         System.out.println("1 = Eten");
         System.out.println("2 = Drinken");
-        Scanner scan = new Scanner(System.in);
+
         int Vraag = scan.nextInt();
 
 
@@ -133,12 +133,18 @@ public class Main
                 if(Eten == 1)
                 {
                     warmEten();
+                    int warmEtenKeuze = scan.nextInt();
+                    if()
+                    break;
+
+
                 }
 
                 //Koud Eten
                 if(Eten == 2)
                 {
                     koudEten();
+                    break;
                 }
                 else{
                     System.out.println("U heeft het verkeerde nummer ingevult! Vul 1 of 2 in.");
@@ -166,12 +172,14 @@ public class Main
                     if (Drinken == 1)
                     {
                         warmDrinken();
+                        break;
                     }
 
                     //Koud Drinken
                     if (Drinken == 2)
                     {
                         koudDrinken();
+                        break;
                     }
 
 
@@ -184,7 +192,7 @@ public class Main
                 //Laat het geld zien wat je hebt
                 System.out.println("Wat wilt u bestellen? U heeft $" + budget);
 
-                int keuze = sc.nextInt();
+                int keuze = scan.nextInt();
                 switch(keuze)
                 {
                     //De 4 cases hieronder zijn voor het Koude eten
@@ -215,13 +223,13 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("         (");
+                        order.add("          )");
+                        order.add("    __..---..__");
+                        order.add(",-='  /  |  \\  `=-.");
+                        order.add(":--..___________..--;");
+                        order.add("\\.,_____________,./");
+
 
                         break;
 
@@ -253,19 +261,19 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add(" _____________,-.___     _");
+                        order.add("|____        { {]_]_]   [_]");
+                        order.add("|___ `-----.__\\ \\_]_]_    . `");
+                        order.add("|   `-----.____} }]_]_]_   ,");
+                        order.add("|_____________/ {_]_]_]_] , `");
+                        order.add("              `-'");
+
 
                         break;
 
 
                         //De 4 cases hieronder zijn voor het Warme Eten
-                    case 5://Chocolade Muffin
+                    case 5://Pannenkoeken
                         //Dit is het budget min de kosten van het product
                         budget -= kost[4];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -274,17 +282,22 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("             _____");
+                        order.add("          .-'     '-.");
+                        order.add("        .'           '.");
+                        order.add("       /               \\");
+                        order.add("      ;                 ;");
+                        order.add("      |                 |");
+                        order.add("      ;                 ;");
+                        order.add("       \\               /");
+                        order.add("        '.           .'");
+                        order.add("          '-._____.-'");
+
+
 
                         break;
 
-                    case 6://Chocolade Muffin
+                    case 6://Pizza
                         //Dit is het budget min de kosten van het product
                         budget -= kost[5];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -293,17 +306,15 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("// \"\"--.._");
+                        order.add("||  (_)  _ \"-._");
+                        order.add("||    _ (_)    '-.");
+                        order.add("||   (_)   __..-'");
+                        order.add(" \\\\__..--\"\"");
 
                         break;
 
-                    case 7://Chocolade Muffin
+                    case 7://Patat
                         //Dit is het budget min de kosten van het product
                         budget -= kost[6];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -312,17 +323,18 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
 
                         break;
 
-                    case 8://Chocolade Muffin
+                    case 8://Poffertjes
                         //Dit is het budget min de kosten van het product
                         budget -= kost[7];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -331,18 +343,19 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("                   .-'''-.");
+                        order.add("           .-'''-./       \\.-'''-.");
+                        order.add("   .-'''-./       \\       /       \\.-'''-.");
+                        order.add("  /       \\       /'-...-'\\.-'''-./       \\");
+                        order.add("  \\       /'-...-'\\.-'''-./       \\       /");
+                        order.add("   '-...-'\\       /       \\       /'-...-'");
+                        order.add("           '-...-'\\       /'-...-'");
+                        order.add("                   '-...-'\n");
 
                         break;
 
                     //De 4 cases hieronder zijn voor het Koude drinken
-                    case 9://Chocolade Muffin
+                    case 9://Water
                         //Dit is het budget min de kosten van het product
                         budget -= kost[8];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -351,17 +364,19 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("     _____________");
+                        order.add("    <_____________> ___");
+                        order.add("    |             |/ _ \\");
+                        order.add("    |               | | |");
+                        order.add("    |               |_| |");
+                        order.add(" ___|             |\\___/");
+                        order.add("/    \\___________/    \\");
+                        order.add("\\_____________________/");
+
 
                         break;
 
-                    case 10://Chocolade Muffin
+                    case 10://limonade
                         //Dit is het budget min de kosten van het product
                         budget -= kost[9];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -370,17 +385,18 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
 
                         break;
 
-                    case 11://Chocolade Muffin
+                    case 11://Appelsap
                         //Dit is het budget min de kosten van het product
                         budget -= kost[10];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -389,17 +405,18 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
 
                         break;
 
-                    case 12://Chocolade Muffin
+                    case 12://Sinasappelsap
                         //Dit is het budget min de kosten van het product
                         budget -= kost[11];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -408,18 +425,19 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");;
 
                         break;
 
                     //De 4 cases hieronder zijn voor het Warme drinken
-                    case 13://Chocolade Muffin
+                    case 13://Thee
                         //Dit is het budget min de kosten van het product
                         budget -= kost[12];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -428,17 +446,22 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("    (  )   (   )  )");
+                        order.add("     ) (   )  (  (");
+                        order.add("     ( )  (    ) )");
+                        order.add("     _____________");
+                        order.add("    <_____________> ___");
+                        order.add("    |             |/ _ \\");
+                        order.add("    |               | | |");
+                        order.add("    |               |_| |");
+                        order.add(" ___|             |\\___/");
+                        order.add("/    \\___________/    \\");
+                        order.add("\\_____________________/");
+
 
                         break;
 
-                    case 14://Chocolade Muffin
+                    case 14://Koffie
                         //Dit is het budget min de kosten van het product
                         budget -= kost[13];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -447,17 +470,19 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("      )  (");
+                        order.add("     (   ) )");
+                        order.add("      ) ( (");
+                        order.add("    _______)_");
+                        order.add(" .-'---------|  ");
+                        order.add("( C|/\\/\\/\\/\\/|");
+                        order.add(" '-./\\/\\/\\/\\/|");
+                        order.add("   '_________'");
+                        order.add("    '-------'");
 
                         break;
 
-                    case 15://Chocolade Muffin
+                    case 15://Hete Chocolademelk
                         //Dit is het budget min de kosten van het product
                         budget -= kost[14];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -466,17 +491,19 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("      )  (");
+                        order.add("     (   ) )");
+                        order.add("      ) ( (");
+                        order.add("    _______)_");
+                        order.add(" .-'---------|  ");
+                        order.add("( C|/\\/\\/\\/\\/|");
+                        order.add(" '-./\\/\\/\\/\\/|");
+                        order.add("   '_________'");
+                        order.add("    '-------'");
 
                         break;
 
-                    case 16://Chocolade Muffin
+                    case 16://Heet water
                         //Dit is het budget min de kosten van het product
                         budget -= kost[15];
                         System.out.println("U heeft een product aangeschaft. U heeft nu nog $" + budget);
@@ -485,36 +512,43 @@ public class Main
 
 
                         //Voegt de keuze toe aan een de Array order
-                        order.add(" ________ ");
-                        order.add("/        \\");
-                        order.add("|        |");
-                        order.add("------------");
-                        order.add("|----------|");
-                        order.add("|----------|");
-                        order.add("\\----------/");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
+                        order.add("");
 
                         break;
                 }
-                /*
-                    System.out.println("Wilt u stoppen?");
-                System.out.println("1 = Ja");
-                System.out.println("2 = Nee");
-                int Stop = scan.nextInt();
-                if(Stop == 1)
+
+                if(budget < 0)
                 {
+                    System.out.println("U heeft geen geld meer!");
+                    System.out.println("U krijgt nu uw geld trug en u moet opnieuw beginnen met bestellen.");
+                }
+
+                System.out.println("Wilt u nog een product kopen?");
+                System.out.println("Ja = 1");
+                System.out.println("Nee = 2");
+                int antwoord = scan.nextInt();
+                while(antwoord == 1);
+                if(antwoord == 2)
+                {
+
+                    for(String order : order)
+                    {
+                        System.out.println(order);
+                    }
+                    System.out.println("Bedankt voor uw aankopen!");
+                    System.out.println("Ik wens u nog een fijne dag!");
+
+                    //Laat het geld wat je over hebt zien
+                    System.out.println("U heeft $"+ budget + "over.");
                     System.exit(1);
                 }
-                if(Stop == 2)
-                {
-                    start();
-                }
-                else
-                {
-                    System.out.println("U heeft het verkeerde nummer ingevult! Vul 1 of 2 in.");
-                }
-                */
-                break;
-
 
 
 
