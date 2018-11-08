@@ -387,14 +387,14 @@ public class Main {
 
 
         //Voegt de keuze toe aan een de Array order
-        order.add("");
-        order.add("");
-        order.add("");
-        order.add("");
-        order.add("");
-        order.add("");
-        order.add("");
-        order.add("");
+        order.add("/\\");
+        order.add("| |");
+        order.add("| |");
+        order.add("\\/");
+        order.add("    /\\");
+        order.add("    | |");
+        order.add("    | |");
+        order.add("    \\/");
     }
 
     public void Poffertjes() {
