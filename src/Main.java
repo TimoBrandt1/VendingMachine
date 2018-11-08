@@ -22,11 +22,35 @@ public class Main {
     public double budget = 20;
 
     //Kosten van de producten
-    public double[] kost = {1.00, 2.00, 0.50, 1.50, 1.00, 5.00, 2.00, 2.50, 0.50, 0.50, 0.99, 0.99, 1.00, 1.00, 1.50, 0.50};
+    public static double[] kost = {1.00, 2.00, 0.50, 1.50, 1.00, 5.00, 2.00, 2.50, 0.50, 0.50, 0.99, 0.99, 1.00, 1.00, 1.50, 0.50};
 
 
     public static void main(String[] args) {
         Main main = new Main();
+
+        // Voegt Koud Eten Toe
+        prodKoudEten.add("Chocolade Muffin $" + kost[0]);
+        prodKoudEten.add("Chocolade Taart $" + kost[1]);
+        prodKoudEten.add("Chocolade Koekje $" + kost[2]);
+        prodKoudEten.add("Chocolade Reep $" + kost[3]);
+
+        //Voegt Warm Eten toe
+        prodWarmEten.add("Pannenkoek $" + kost[4]);
+        prodWarmEten.add("Pizza $" + kost[5]);
+        prodWarmEten.add("Patat $" + kost[6]);
+        prodWarmEten.add("Poffertjes $" + kost[7]);
+
+        //Voegt Koud Drinken toe
+        prodKoudDrinken.add("Water $" + kost[8]);
+        prodKoudDrinken.add("Limonade $" + kost[9]);
+        prodKoudDrinken.add("Appelsap $" + kost[10]);
+        prodKoudDrinken.add("Sinasappelsap $" + kost[11]);
+
+        //Voegt Warm Drinken toe
+        prodWarmDrinken.add("Thee $" + kost[12]);
+        prodWarmDrinken.add("Koffie $" + kost[13]);
+        prodWarmDrinken.add("Hete Chocomelk $" + kost[14]);
+        prodWarmDrinken.add("Heet water $" + kost[15]);
         main.start();
     }
 
@@ -91,36 +115,16 @@ public class Main {
         }
     }
 
+
+
     public void start() {
 
-        // Voegt Koud Eten Toe
-        prodKoudEten.add("Chocolade Muffin $" + kost[0]);
-        prodKoudEten.add("Chocolade Taart $" + kost[1]);
-        prodKoudEten.add("Chocolade Koekje $" + kost[2]);
-        prodKoudEten.add("Chocolade Reep $" + kost[3]);
 
-        //Voegt Warm Eten toe
-        prodWarmEten.add("Pannenkoek $" + kost[4]);
-        prodWarmEten.add("Pizza $" + kost[5]);
-        prodWarmEten.add("Patat $" + kost[6]);
-        prodWarmEten.add("Poffertjes $" + kost[7]);
-
-        //Voegt Koud Drinken toe
-        prodKoudDrinken.add("Water $" + kost[8]);
-        prodKoudDrinken.add("Limonade $" + kost[9]);
-        prodKoudDrinken.add("Appelsap $" + kost[10]);
-        prodKoudDrinken.add("Sinasappelsap $" + kost[11]);
-
-        //Voegt Warm Drinken toe
-        prodWarmDrinken.add("Thee $" + kost[12]);
-        prodWarmDrinken.add("Koffie $" + kost[13]);
-        prodWarmDrinken.add("Hete Chocomelk $" + kost[14]);
-        prodWarmDrinken.add("Heet water $" + kost[15]);
 
 
         //Het begin van de vragen
         System.out.println("Goedendag u zult vragen krijgen over wat u wilt eten en drinken.");
-        System.out.println("U heeft $20");
+        System.out.println("U heeft $" + budget);
 
         //Wilt u Eten of drinken vraag
         System.out.println("Wilt u iets eten of iets drinken?");
@@ -163,6 +167,7 @@ public class Main {
                         Poffertjes();
                         meerKopen();
                     }
+
                     break;
                 }
 
